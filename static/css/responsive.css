@@ -1,0 +1,55 @@
+@import url("styles.css");
+
+@media screen and (max-width: 575px) {
+
+    .collapse {
+        justify-content: flex-start;
+    }
+    .carousel {
+        width: 100% !important;
+    }
+
+    .main-intro {
+        width: 100%;
+    }
+
+    footer {
+        width: 90%;
+    }
+
+    .seventy-percent-div {
+        width: 100%;
+    }
+
+    .seventy-percent-div-column {
+        width: 100% !important;
+    }
+
+    .row img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .main-imgs-container {
+        flex-direction: column;
+    }
+
+    .main-img {
+        cursor: pointer;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .main {
+        min-width: 345px;
+    }
+
+    footer {
+        min-width: 345px;
+    }
+}

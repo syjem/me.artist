@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+    <div class="seventy-percent-div mt-5">
+        <img src="static/imgs/pexels-photo-background.jpg" alt="Photography Background" class="img-fluid">
+    </div>
+    <div class="row seventy-percent-div column mt-5">
+        <h1 class="text-center mb-4 p-sm-2">Jem Sync Photography</h1>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <p>Whether you're looking for family portraits, wedding photography, or professional headshots, we pride ourselves on delivering exceptional quality and service that exceeds your expectations.</p>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <p>Our studio is equipped with state-of-the-art equipment and a variety of backdrops and props to create stunning images that reflect your unique personality and style.</p>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <p>We understand that each client has their own story to tell, and we are committed to working with you to create images that truly capture your essence. Come visit us and let's create beautiful memories together!</p>
+        </div>
+    </div>
+    <div class="seventy-percent-div mt-5">
+        <img src="static/imgs/pexels-photo-girl.jpg" alt="" class="img-fluid">
+    </div>
+    <a href="{{ url_for('gallery') }}" class="btn mt-5">Visit Gallery</a>
+{% endblock %}

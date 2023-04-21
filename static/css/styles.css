@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'PT Serif', serif;
+}
+
+header {
+    box-shadow: 1px 1px 1px rgb(244, 240, 240);
+    z-index: 10;
+    background-color: white;
+}
+
+.avatar {
+    width: 100%;
+    height: 50px;
+}
+
+.font-weight-md {
+    font-weight: 600;
+}
+
+.collapse {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.active {
+    color: rgb(192, 25, 19) !important;
+    font-weight: 700;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px auto;
+    width: 100%;
+}
+
+.carousel {
+    width: 70%;
+    height: 500px !important;
+    margin: 40px auto;
+}
+
+.carousel-item {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.slide-images {
+    width: 100%;
+    height: 500px;
+}
+
+.main-intro {
+    width: 70%;
+}
+
+.main-imgs-container {
+    padding: 0;
+    display: flex;
+    gap: 5px;
+}
+
+.main-img {
+    cursor: pointer;
+    width: 33%;
+    height: 100%;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.main-img:hover {
+    opacity: 1;
+    animation: images-opacity 0.5s ease-in-out forwards;
+}
+
+@keyframes images-opacity {
+    0% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.btn {
+    width: 150px;   
+    border: 2px solid black;
+    color: rgb(215, 90, 17);
+}
+
+.btn:hover {
+    border: 2px solid rgb(215, 90, 17) !important;
+    color: black;
+}
+
+.sign-up-btn {
+    color: white;
+    border: 1px solid rgb(153, 186, 222) !important;
+}
+
+.sign-up-btn:hover {
+    border: 1px solid rgb(153, 186, 222) !important;
+    color: white !important;
+}
+
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto !important;
+    padding: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid rgb(221, 42, 42);
+    gap: 20px;
+}
+
+footer div {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-credits {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-credits span {
+    font-size: 18px;
+}
+
+.social-icons i {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 25px;
+    color: rgb(4, 64, 64);
+}
+
+.footer-logo-img {
+    width: 300px;
+}
+
+
+/* ABOUT */
+
+.seventy-percent-div {
+    display: flex;
+    width: 70%;
+}
+
+/* Gallery */
+
+.seventy-percent-div-column {
+    display: flex;
+    flex-direction: column;
+    width: 70% !important;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.row img {
+    width: 300px;
+    height: 200px;
+}
+
+
+
+/* Contact */
+
+.form-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.email:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Sign Up */
+
+.icon {
+    fill: #000;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.g-btn {
+    color: white;
+    border: 1px solid rgb(32, 29, 29);
+}
+
+.g-btn:hover {
+    border: 1px solid rgb(32, 29, 29) !important;
+    color: white;
+}
+
+.sign_up_container {
+    display: flex;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 75%;
+}
+
+.google-sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divide {
+    display: flex;
+    gap: 10px;
+}
+
+.hr {
+    width: 50%;
+    border-bottom: 3px solid #11b5cb;
+}
+
+.span {
+    position: relative;
+    top: 3px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex !important;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.form-group div {
+    flex-basis: 50%;
+}
+
+#first_name, #last_name {
+    flex-basis: 50%;
+    display: inline-flex !important;
+}
+
+.sign-in-option {
+    display: flex;
+    width: 75%;
+    justify-content: center !important;
+    align-items: center;
+    align-self: center;
+    gap: 10px;
+}
+
+.sign-in-option p {
+    align-self: center;
+    margin: auto 0;
+    font-weight: 500;
+}
+
+.sign-in-option a {
+    align-self: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.policy {
+    font-size: 12px;
+    line-height: 2px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 50;  
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
