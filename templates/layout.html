@@ -10,7 +10,7 @@
         rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" 
         crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" 
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -24,24 +24,24 @@
         <!-- Favicon -->
         <link rel="icon" href="static/imgs/favicon.jpg">
 
-        <title>Jem Sync Photography | {% block title %} {% endblock %}</title>
+        <title>{% block title %} {% endblock %}</title>
     </head>
-    <body class="bg-light-subtle">
-        <header class="container-fluid fixed-top">
-            <nav class="p-2 container-fluid navbar navbar-expand-sm justify-content-sm-center">
-                <a class="navbar-brand" href="{{ url_for('home') }}">
-                    <img class="img-fluid avatar" src="static/imgs/avatar.png" alt="Brand">
+    <body class="bg-secondary">
+        <header class="container-fluid fixed-top" id="header">
+            <nav class="p-2 container-fluid navbar navbar-expand-sm justify-content-sm-center text-light">
+                <a class="navbar-brand text-light" href="{{ url_for('home') }}">
+                    <h1>ME<div class="span-brand"></div>ARTIST</h1>
                 </a>
-                <button title="Menu" class="navbar-toggler text-bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <button title="Menu" class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav p-1 list-unstyled">
-                        <li class="p-2 nav-item"><a class="home nav-link text-dark {% if request.path == url_for('home') %}active{% endif %}" href="{{ url_for('home') }}">Home</a></li>
-                        <li class="p-2 nav-item"><a class="about nav-link text-dark {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">About</a></li>
-                        <li class="p-2 nav-item"><a class="gallery nav-link text-dark {% if request.path == url_for('gallery') %}active{% endif %}" href="{{ url_for('gallery') }}">Gallery</a></li>
-                        <li class="p-2 nav-item"><a class="signup nav-link text-dark {% if request.path == url_for('signup') %}active{% endif %}" href="{{ url_for('signup') }}">Sign Up</a></li>
-                        <li class="p-2 nav-item"><a class="contact nav-link text-dark {% if request.path == url_for('contact') %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a></li>
+                        <li class="p-2 nav-item"><a class="home nav-link text-light {% if request.path == url_for('home') %}active{% endif %}" href="{{ url_for('home') }}">Home</a></li>
+                        <li class="p-2 nav-item"><a class="about nav-link text-light {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">About</a></li>
+                        <li class="p-2 nav-item"><a class="gallery nav-link text-light {% if request.path == url_for('gallery') %}active{% endif %}" href="{{ url_for('gallery') }}">Gallery</a></li>
+                        <li class="p-2 nav-item"><a class="signup nav-link text-light {% if request.path == url_for('signup') %}active{% endif %}" href="{{ url_for('signup') }}">Sign Up</a></li>
+                        <li class="p-2 nav-item"><a class="contact nav-link text-light {% if request.path == url_for('contact') %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -51,10 +51,10 @@
 
             {% endblock %}
         </main>
-        <footer class="footer-container">
+        <!-- <footer class="footer-container">
             <div class="footer-logo">
                 <a href="{{ url_for('home') }}">
-                    <img class="footer-logo-img" src="static/imgs/avatar.png" alt="Logo">
+                    <h1>ME<div class="span-brand"></div>ARTIST</h1>
                 </a>
             </div>
             <div class="footer-credits">
@@ -72,6 +72,7 @@
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </div>
-        </footer>
+        </footer> -->
+        <script src="static/js/script.js"></script>
     </body>
 </html>
