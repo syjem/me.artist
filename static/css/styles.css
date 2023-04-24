@@ -104,30 +104,29 @@ header {
     height: 80vh;
     background-size: cover;
     background-repeat: no-repeat; 
-    background-position: center center; 
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-  }
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    width: 40%;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.text-overlay h1 {
+    font-size: 68px !important;
+}
 
 .image-1 {
     background-image: url('../imgs/bg-image.png');
-  }
-  
-  .image-2 {
-    background-image: url('../imgs/dark\ music.png');
-  }
-  
-  .image-3 {
-    background-image: url('../imgs/pexels-photo-lights1.jpg');
-  }
-
+}
 
 .slide-images {
     width: 100%;
