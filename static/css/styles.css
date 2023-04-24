@@ -128,6 +128,10 @@ header {
     background-image: url('../imgs/bg-image.png');
 }
 
+.image-2 {
+    background-image: url('../imgs/dark\ music.png');
+}
+
 .slide-images {
     width: 100%;
     height: 600px !important;
@@ -165,26 +169,22 @@ header {
     }
 }
 
-.btn {
-    width: 150px;   
-    border: 2px solid black;
-    color: rgb(215, 90, 17);
-}
-
-.btn:hover {
-    border: 2px solid rgb(215, 90, 17) !important;
-    color: black;
-}
-
 .sign-up-btn {
     color: white;
-    border: 1px solid rgb(153, 186, 222) !important;
+    background-image: linear-gradient(90deg, #1c1c1c, #3667a6, #1c1c1c);
+    transform: translate(0, -3px);
+    transition: 0.2s;
+    transition-timing-function: linear;
 }
 
 .sign-up-btn:hover {
-    border: 1px solid rgb(153, 186, 222) !important;
     color: white !important;
 }
+
+.sign-up-btn:active {
+    transform: translate(0, 0);
+    border-bottom: 2px solid rgb(50, 50, 50);
+  }
 
 
 .footer-container {
@@ -282,17 +282,36 @@ footer div {
     fill: #000;
     width: 24px;
     height: 24px;
-    margin-right: 10px;
 }
 
-.g-btn {
+.google-btn {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1.4rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    gap: 0.75rem;
     color: white;
-    border: 1px solid rgb(32, 29, 29);
+    background: #ad5389;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    transform: translate(0, -3px);
+    transition: 0.2s;
+    transition-timing-function: linear;
 }
 
-.g-btn:hover {
-    border: 1px solid rgb(32, 29, 29) !important;
-    color: white;
+.google-btn:active {
+    transform: translate(0, 0);
+    border-bottom: 2px solid rgb(50, 50, 50);
 }
 
 .sign_up_container {
@@ -303,6 +322,7 @@ footer div {
     display: flex;
     flex-direction: column;
     flex-basis: 75%;
+    z-index: 1;
 }
 
 .google-sign-up {
