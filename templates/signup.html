@@ -6,9 +6,9 @@
 {% block main %}
     <div class="sign_up_container mt-5 w-50">
         <div class="section p-5 m-auto w-50">
-            <h1 class="m-4 text-center">Join Me.Artist today</h1>
+            <h1 class="m-4 text-center text-light">Join Me.Artist today</h1>
             <div class="google-sign-up w-100 m-auto">
-                <button type="button" class="btn btn-secondary w-100 g-btn">
+                <button type="button" class="google-btn w-100">
                     <img src="static/imgs/google.svg" alt="Google SVG Icon" class="icon">
                     Sign Up with Google
                 </button>
@@ -46,15 +46,15 @@
                 </div>
                 <input type="email" class="form-control" name="email" required autocomplete="off" value="{{ email }}" placeholder="Email">
                 <input type="password" class="form-control mb-3" name="password" required autocomplete="off" placeholder="Password">
-                <input type="submit" class="btn btn-info m-auto sign-up-btn" value="Sign Up">
+                <input type="submit" class="btn m-auto sign-up-btn w-50" value="Sign Up">
             </form>
             <div class="sign-in-option mt-3 mb-3">
-                <p>Already have an account?</p>
+                <p class="text-light">Already have an account?</p>
                 <a href="url_for('sign_in')">Sign In</a>
             </div>
             <div class="m-auto policy">
-                <p class="text-center">By signing up you agree to our</p>
-                <p class="links"><a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                <p class="text-center text-light">By signing up you agree to our</p>
+                <p class="links text-light"><a href="#" class="text-light">Terms of Service</a> and <a href="#" class="text-light">Privacy Policy</a></p>
             </div>
         </div>
     </div>
