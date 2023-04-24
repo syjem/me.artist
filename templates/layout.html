@@ -28,7 +28,7 @@
     </head>
     <body class="bg-secondary">
         <header class="container-fluid fixed-top" id="header">
-            <nav class="p-2 container-fluid navbar navbar-expand-sm justify-content-sm-center text-light">
+            <nav class="container-fluid navbar navbar-expand-sm justify-content-sm-center text-light">
                 <a class="navbar-brand text-light" href="{{ url_for('home') }}">
                     <h1>ME<div class="span-brand"></div>ARTIST</h1>
                 </a>
@@ -39,7 +39,6 @@
                     <ul class="navbar-nav p-1 list-unstyled">
                         <li class="p-2 nav-item"><a class="home nav-link text-light {% if request.path == url_for('home') %}active{% endif %}" href="{{ url_for('home') }}">Home</a></li>
                         <li class="p-2 nav-item"><a class="about nav-link text-light {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">About</a></li>
-                        <li class="p-2 nav-item"><a class="gallery nav-link text-light {% if request.path == url_for('gallery') %}active{% endif %}" href="{{ url_for('gallery') }}">Gallery</a></li>
                         <li class="p-2 nav-item"><a class="signup nav-link text-light {% if request.path == url_for('signup') %}active{% endif %}" href="{{ url_for('signup') }}">Sign Up</a></li>
                         <li class="p-2 nav-item"><a class="contact nav-link text-light {% if request.path == url_for('contact') %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a></li>
                     </ul>
