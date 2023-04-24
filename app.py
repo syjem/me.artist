@@ -111,61 +111,7 @@ def signup():
 
             return redirect("/")
 
-
     return render_template("signup.html")
-
-SERVICES = [
-    "Weddings",
-    "Portraits",
-    "Families",
-    "Graduations",
-    "Birthdays",
-    "Other Occasions"
-]
-
-@app.route("/contact", methods=["GET", "POST"])
-def contact():
-    if request.method == "POST":
-        name = request.form.get("name")
-        email = request.form.get("email")
-        date = request.form.get("date")
-        service = request.form.get("select_services")
-
-        # Initialize an empty list to store validation errors
-        errors = []
-
-        # form validation
-        if not name:
-             errors.append("Please enter a valid name!")
-        elif len(name) < 3:
-            errors.append("Name is too short!")
-        if not email or not re.match(r"[^@]+@[^@]+\.[^@]+", email):
-            errors.append("Please enter a valid email!")
-        if not date:
-           errors.append("Please select a valid date!")
-        elif datetime.strptime(date, '%Y-%m-%d').date() < current_date:
-            errors.append("Please select dates that are not prior to the current date.")
-        if service not in SERVICES:
-            errors.append("Please select a valid service!")
-
-        if errors:
-            # If there are any errors, flash them all at once as error messages
-            for error in errors:
-                flash(error, category='error')
-
-            # Render the form template with error messages and retained form data
-            return render_template("contact.html", services=SERVICES, 
-                                    name=name, email=email, date=date,
-                                    selected_service=service
-                                )
-
-        else:
-            flash("You have booked successfully!", category='success')
-    
-    return render_template("contact.html", services=SERVICES)
-
-
-
 
 
 if __name__ == '__main__':
