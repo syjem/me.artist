@@ -37,9 +37,9 @@
             {% endwith %}
 
             <form class="form-control p-5 form-flex" action="" method="POST">
-                <input type="text" class="form-control mt-3" name="name" placeholder="Name" value="{{ name }}"  autocomplete="off">
-                <input type="email" class="form-control mt-3" name="email" placeholder="Email" value="{{ email }}"  autocomplete="off">
-                <input type="date" class="form-control mt-3" name="date" placeholder="Date" value="{{ date }}"  autocomplete="off">
+                <input type="text" class="form-control mt-3" name="name" placeholder="Name" required value="{{ name }}"  autocomplete="off">
+                <input type="email" class="form-control mt-3" name="email" placeholder="Email" required value="{{ email }}"  autocomplete="off">
+                <input type="date" class="form-control mt-3" name="date" placeholder="Date" required value="{{ date }}"  autocomplete="off">
                 <select class="form-select mt-3" required name="select_services">
                     <option value="Select Services" selected disabled>Select Services</option>
                     {% for service in services %}

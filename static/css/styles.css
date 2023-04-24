@@ -260,22 +260,6 @@ footer div {
     height: 200px;
 }
 
-
-
-/* Contact */
-
-.form-flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.email:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
 /* Sign Up */
 
 .icon {
