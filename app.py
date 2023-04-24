@@ -85,7 +85,7 @@ def signup():
         # Password validation regex pattern
         password_pattern = r"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&_.,<>]{6,}$"
         if not password or not re.match(password_pattern, password):
-            errors.append("Password need to be at least 6 characters, with a number and a special character.")
+            errors.append("Try another password!")
         
         if errors:
             # If there are any errors, flash them all at once as error messages
