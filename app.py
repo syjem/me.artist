@@ -1,6 +1,6 @@
 import re
 
-from flask_sqlalchemy import SQLAlchemy
+from models import *
 from flask import Flask, render_template, flash, request, session, url_for, redirect
 from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime
@@ -8,23 +8,14 @@ from datetime import datetime
 # from models import db, Users
 
 app = Flask(__name__)
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/' 
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 # Configure SQLAlchemy to use SQLite database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
-db = SQLAlchemy(app)
+db.init_app(app)
 
-class Users(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    first_name = db.Column(db.String(50), nullable=False)
-    last_name = db.Column(db.String(50), nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(120), nullable=False)
-
-    def __repr__(self):
-        return f'<User {self.first_name} {self.last_name}, Email: {self.email}>'
-
-with app.app_context():
+# with app.app_context():
+def main():
     # Call create_all to create the tables
     db.create_all()
 
